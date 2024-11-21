@@ -1,8 +1,8 @@
 {
   "name": "cv-api",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "private": true,
-  "description": "A Strapi application",
+  "description": "Strapi application for CV",
   "scripts": {
     "build": "strapi build",
     "deploy": "strapi deploy",
@@ -11,13 +11,15 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.2.0",
-    "@strapi/plugin-users-permissions": "5.2.0",
-    "@strapi/strapi": "5.2.0",
+    "@strapi/plugin-cloud": "5.3.0",
+    "@strapi/plugin-color-picker": "^5.3.0",
+    "@strapi/plugin-users-permissions": "5.3.0",
+    "@strapi/strapi": "5.3.0",
     "better-sqlite3": "11.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
+    "strapi-plugin-multi-select": "^2.1.1",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
