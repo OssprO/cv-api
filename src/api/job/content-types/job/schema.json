@@ -1,0 +1,126 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "singularName": "job",
+    "pluralName": "jobs",
+    "displayName": "Job",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "position": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "location": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "description": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "start": {
+      "type": "date",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "end": {
+      "type": "date",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "color": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "technologies": {
+      "type": "customField",
+      "default": "[]",
+      "options": [
+        "AS3/Flex/AIR",
+        "Swift",
+        "SVN",
+        "Arduino",
+        "Ionic",
+        "WordPress",
+        "AngularJS",
+        "Tizen OS",
+        "PHP",
+        "HTML",
+        "CSS",
+        "Illustrator",
+        "Photoshop",
+        "Polymer",
+        "Angular",
+        "JavaScript",
+        "Jira",
+        "CI/CD",
+        "Patrones de Diseño",
+        "Web Components",
+        "Angular",
+        "TypeScript",
+        "SCSS",
+        "GraphQL",
+        "Unit Testing",
+        "React",
+        "Jira"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "printable": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "projects": {
+      "displayName": "Projects",
+      "type": "component",
+      "repeatable": true,
+      "component": "projects.projects",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

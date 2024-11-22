@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_projects_projects",
+  "info": {
+    "displayName": "projects",
+    "icon": "chartBubble",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "start": {
+      "type": "date"
+    },
+    "end": {
+      "type": "date"
+    },
+    "tasks": {
+      "type": "blocks"
+    }
+  }
+}

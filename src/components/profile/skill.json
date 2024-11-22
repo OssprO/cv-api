@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_profile_skills",
+  "info": {
+    "displayName": "skill",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "percentage": {
+      "type": "integer",
+      "required": true
+    },
+    "skills": {
+      "displayName": "Subskills",
+      "type": "component",
+      "repeatable": true,
+      "component": "profile.subskills"
+    }
+  }
+}

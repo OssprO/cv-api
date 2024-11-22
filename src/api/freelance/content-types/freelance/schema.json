@@ -1,0 +1,92 @@
+{
+  "kind": "collectionType",
+  "collectionName": "freelances",
+  "info": {
+    "singularName": "freelance",
+    "pluralName": "freelances",
+    "displayName": "Freelance",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "location": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "description": {
+      "type": "blocks",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "start": {
+      "type": "date",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "end": {
+      "type": "date",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "color": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "printable": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "technologies": {
+      "type": "customField",
+      "default": "[]",
+      "options": [
+        "Angular",
+        "Strapi",
+        "NgRx",
+        "Patrones de Diseño",
+        "SCSS",
+        "HTML5",
+        "WordPress",
+        "AS3/Flex/AIR",
+        "SQLLite",
+        "Photoshop",
+        "Unity3D",
+        "C#"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    }
+  }
+}
