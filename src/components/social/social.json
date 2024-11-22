@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_social_socials",
+  "info": {
+    "displayName": "social",
+    "icon": "twitter"
+  },
+  "options": {},
+  "attributes": {
+    "network": {
+      "type": "string",
+      "regex": "^[a-zA-Z]{2}$"
+    },
+    "url": {
+      "type": "string",
+      "regex": "^(https?:\\/\\/)?([\\w-]+\\.)+[\\w-]+(\\/[\\w-]*)*\\/?(\\?[^\\s]*)?$"
+    }
+  }
+}
