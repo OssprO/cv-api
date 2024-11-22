@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_profile_subskills",
+  "info": {
+    "displayName": "subskills",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "percentage": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

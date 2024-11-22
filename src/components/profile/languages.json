@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_profile_languages",
+  "info": {
+    "displayName": "languages",
+    "icon": "globe"
+  },
+  "options": {},
+  "attributes": {
+    "language": {
+      "type": "string",
+      "regex": "^[a-zA-Z]{2,3}(-[a-zA-Z]{2,4})?$"
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "BASIC",
+        "CONVERSATIONAL",
+        "PROFICIENT",
+        "NATIVE"
+      ]
+    }
+  }
+}
