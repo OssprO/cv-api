@@ -625,13 +625,11 @@ export interface ApiJobJob extends Struct.CollectionTypeSchema {
           'CI/CD',
           'Patrones de Dise\u00F1o',
           'Web Components',
-          'Angular',
           'TypeScript',
           'SCSS',
           'GraphQL',
           'Unit Testing',
           'React',
-          'Jira',
         ]
       > &
       Schema.Attribute.DefaultTo<'[]'>;
