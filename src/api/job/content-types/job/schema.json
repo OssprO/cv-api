@@ -93,13 +93,11 @@
         "CI/CD",
         "Patrones de Diseño",
         "Web Components",
-        "Angular",
         "TypeScript",
         "SCSS",
         "GraphQL",
         "Unit Testing",
-        "React",
-        "Jira"
+        "React"
       ],
       "customField": "plugin::multi-select.multi-select"
     },
