@@ -69,38 +69,6 @@
       "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
       "customField": "plugin::color-picker.color"
     },
-    "technologies": {
-      "type": "customField",
-      "default": "[]",
-      "options": [
-        "AS3/Flex/AIR",
-        "Swift",
-        "SVN",
-        "Arduino",
-        "Ionic",
-        "WordPress",
-        "AngularJS",
-        "Tizen OS",
-        "PHP",
-        "HTML",
-        "CSS",
-        "Illustrator",
-        "Photoshop",
-        "Polymer",
-        "Angular",
-        "JavaScript",
-        "Jira",
-        "CI/CD",
-        "Patrones de Diseño",
-        "Web Components",
-        "TypeScript",
-        "SCSS",
-        "GraphQL",
-        "Unit Testing",
-        "React"
-      ],
-      "customField": "plugin::multi-select.multi-select"
-    },
     "printable": {
       "type": "boolean",
       "pluginOptions": {
@@ -119,6 +87,12 @@
           "localized": true
         }
       }
+    },
+    "technologies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::technology.technology",
+      "mappedBy": "jobs"
     }
   }
 }
