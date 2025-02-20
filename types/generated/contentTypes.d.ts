@@ -503,25 +503,10 @@ export interface ApiFreelanceFreelance extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
-    technologies: Schema.Attribute.JSON &
-      Schema.Attribute.CustomField<
-        'plugin::multi-select.multi-select',
-        [
-          'Angular',
-          'Strapi',
-          'NgRx',
-          'Patrones de Dise\u00F1o',
-          'SCSS',
-          'HTML5',
-          'WordPress',
-          'AS3/Flex/AIR',
-          'SQLLite',
-          'Photoshop',
-          'Unity3D',
-          'C#',
-        ]
-      > &
-      Schema.Attribute.DefaultTo<'[]'>;
+    technologies: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::technology.technology'
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -601,38 +586,10 @@ export interface ApiJobJob extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
-    technologies: Schema.Attribute.JSON &
-      Schema.Attribute.CustomField<
-        'plugin::multi-select.multi-select',
-        [
-          'AS3/Flex/AIR',
-          'Swift',
-          'SVN',
-          'Arduino',
-          'Ionic',
-          'WordPress',
-          'AngularJS',
-          'Tizen OS',
-          'PHP',
-          'HTML',
-          'CSS',
-          'Illustrator',
-          'Photoshop',
-          'Polymer',
-          'Angular',
-          'JavaScript',
-          'Jira',
-          'CI/CD',
-          'Patrones de Dise\u00F1o',
-          'Web Components',
-          'TypeScript',
-          'SCSS',
-          'GraphQL',
-          'Unit Testing',
-          'React',
-        ]
-      > &
-      Schema.Attribute.DefaultTo<'[]'>;
+    technologies: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::technology.technology'
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -766,6 +723,57 @@ export interface ApiSkillSkill extends Struct.CollectionTypeSchema {
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTechnologyTechnology extends Struct.CollectionTypeSchema {
+  collectionName: 'technologies';
+  info: {
+    description: '';
+    displayName: 'Technology';
+    pluralName: 'technologies';
+    singularName: 'technology';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    freelances: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::freelance.freelance'
+    >;
+    jobs: Schema.Attribute.Relation<'manyToMany', 'api::job.job'>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::technology.technology'
+    >;
+    name: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'name'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
         };
       }>;
     updatedAt: Schema.Attribute.DateTime;
@@ -1288,6 +1296,7 @@ declare module '@strapi/strapi' {
       'api::job.job': ApiJobJob;
       'api::profile.profile': ApiProfileProfile;
       'api::skill.skill': ApiSkillSkill;
+      'api::technology.technology': ApiTechnologyTechnology;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

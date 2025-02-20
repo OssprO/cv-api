@@ -70,23 +70,10 @@
       }
     },
     "technologies": {
-      "type": "customField",
-      "default": "[]",
-      "options": [
-        "Angular",
-        "Strapi",
-        "NgRx",
-        "Patrones de Diseño",
-        "SCSS",
-        "HTML5",
-        "WordPress",
-        "AS3/Flex/AIR",
-        "SQLLite",
-        "Photoshop",
-        "Unity3D",
-        "C#"
-      ],
-      "customField": "plugin::multi-select.multi-select"
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::technology.technology",
+      "mappedBy": "freelances"
     }
   }
 }
