@@ -40,6 +40,10 @@ jobs:
             DATABASE_USERNAME: ${{ secrets.DATABASE_USERNAME }}
             DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
             DATABASE_SSL_REJECT_UNAUTHORIZED: ${{ secrets.DATABASE_SSL_REJECT_UNAUTHORIZED }}
+            APP_KEYS: ${{ secrets.APP_KEYS }}
+            API_TOKEN_SALT: ${{ secrets.API_TOKEN_SALT }}
+            ADMIN_JWT_SECRET: ${{ secrets.ADMIN_JWT_SECRET }}
+            TRANSFER_TOKEN_SALT: ${{ secrets.TRANSFER_TOKEN_SALT }}
           EOF
 
       - name: Setup GCloud Auth
