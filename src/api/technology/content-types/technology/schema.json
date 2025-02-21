@@ -33,7 +33,8 @@
         }
       },
       "type": "uid",
-      "targetField": "name"
+      "targetField": "name",
+      "required": true
     },
     "jobs": {
       "type": "relation",
