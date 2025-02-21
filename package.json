@@ -1,8 +1,8 @@
 {
   "name": "cv-api",
-  "version": "1.0.0",
+  "version": "1.5.1",
   "private": true,
-  "description": "Strapi application for CV",
+  "description": "Strapi application for Osiel's CV",
   "scripts": {
     "build": "strapi build",
     "deploy": "strapi deploy",
@@ -11,10 +11,10 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.7.0",
-    "@strapi/plugin-color-picker": "^5.7.0",
-    "@strapi/plugin-users-permissions": "5.7.0",
-    "@strapi/strapi": "5.7.0",
+    "@strapi/plugin-cloud": "5.10.3",
+    "@strapi/plugin-color-picker": "^5.10.3",
+    "@strapi/plugin-users-permissions": "5.10.3",
+    "@strapi/strapi": "5.10.3",
     "better-sqlite3": "11.3.0",
     "pg": "^8.6.0",
     "react": "^18.0.0",
